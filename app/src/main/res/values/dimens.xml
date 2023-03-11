@@ -1,3 +1,4 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <item name="text_scale" type="dimen" format="float">1.5</item>
 </resources>

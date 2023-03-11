@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NetworkTest">
+
+    <TextView
+        android:id="@+id/txtPromt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="@dimen/text_scale"
+        android:scaleY="@dimen/text_scale"
+        android:text="@string/marticle_promt"
+        app:layout_constraintBottom_toTopOf="@id/txtNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="@dimen/text_scale"
+        android:scaleY="@dimen/text_scale"
+        android:text="@string/send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtPromt"
+        app:layout_constraintVertical_bias="0.756" />
+
+    <TextView
+        android:id="@+id/txtServerAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="@dimen/text_scale"
+        android:scaleY="@dimen/text_scale"
+        android:text="@string/response_from_Server"
+        app:layout_constraintBottom_toTopOf="@id/btnSend"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtNumber"
+        app:layout_constraintVertical_bias="0.703"
+        tools:text="Antwort vom Server" />
+
+    <EditText
+        android:id="@+id/txtNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/text_field_hint"
+        android:inputType="number"
+        android:scaleX="@dimen/text_scale"
+        android:scaleY="@dimen/text_scale"
+        app:layout_constraintBottom_toTopOf="@id/txtServerAnswer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtPromt"
+        tools:layout_constraintVertical_bias="0.5" />
+</androidx.constraintlayout.widget.ConstraintLayout>
