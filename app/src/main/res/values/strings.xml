@@ -7,4 +7,5 @@
     <string name="send">Abschicken</string>
     <string name="response_from_Server">Antwort vom Server</string>
     <string name="text_field_hint">Martikelnummer</string>
+    <string name="calculate">Berechnen</string>
 </resources>

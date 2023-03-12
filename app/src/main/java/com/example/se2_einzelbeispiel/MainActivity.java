@@ -3,7 +3,6 @@ package com.example.se2_einzelbeispiel;
 import android.os.Bundle;
 
 import com.example.se2_einzelbeispiel.databinding.ActivityMainBinding;
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -57,6 +56,26 @@ public class MainActivity extends AppCompatActivity {
                         throw new RuntimeException(e);
                     }
                 }).start();
+            }
+        });
+        binding.btnCalculate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText txtInput = findViewById(R.id.txtInput);
+                String input = txtInput.getText().toString();
+                String output = "";
+
+                char[] arr = input.toCharArray();
+                for (int i : new int[]{0, 1, 4, 6, 8, 9}) { //non prime digits
+                    for (char c : arr) {
+                        if (c == '0' + i) {
+                            output += c;
+                        }
+                    }
+                }
+
+                TextView txtResponse = findViewById(R.id.txtServerAnswer);
+                txtResponse.setText(output);
             }
         });
     }
